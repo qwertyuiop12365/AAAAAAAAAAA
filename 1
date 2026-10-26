@@ -1,0 +1,20 @@
+//вариант 13 базовый уровень
+
+char[] mas = new char[10];
+Random random= new Random();
+for (int i = 0; i < mas.GetLength(0); i++)
+{  
+    mas[i] = (char)random.Next(36, 100);
+    Console.Write(mas[i] + " ");
+}
+Console.WriteLine();
+int k = 0;
+for (int i = 0; i < mas.GetLength(0); i++)
+{
+    char ch1 = mas[i];
+    bool p = char.IsLetter(ch1);
+    if (p) Console.Write(ch1); k++;
+    
+}
+Console.WriteLine();
+Console.WriteLine($"букв в массиве: {k}");
